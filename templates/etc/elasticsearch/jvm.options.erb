@@ -25,7 +25,6 @@ defaults = {
   '-Dlog4j2.disable.jmx' => '-Dlog4j2.disable.jmx=true',
   'HeapDumpOnOutOfMemoryError' => '-XX:+HeapDumpOnOutOfMemoryError',
   'Xloggc' => "-Xloggc:#{@logdir}/gc.log",
-  'NumberOfGCLogFiles' => '-XX:NumberOfGCLogFiles=32',
 }
 defaults.each {|k,v| set_default(@jvm_options, k, v)}
 
